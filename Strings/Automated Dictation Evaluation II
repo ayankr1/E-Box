@@ -1,0 +1,36 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+  int  flag= 0  , i ;
+  char inp[50],stu[50];
+  printf("Enter the word");
+  scanf("%s"  ,inp);
+  printf("\nEnter the word the student has typed");
+  scanf("%s",stu);
+  if(strlen(inp) != strlen(stu))
+  {
+    flag=1;
+  }
+  
+  else
+  {
+    for(i=0;i<strlen(inp);i ++)
+    {
+      if(inp[i] != stu[i])
+      {
+        flag=1;
+      }
+    }
+  }
+  
+  if(flag==1)
+  {
+    printf("\nIt is wrong");
+  }
+  else
+  {
+    printf("\nIt is correct");
+  }
+  return 0;
+}
