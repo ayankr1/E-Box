@@ -1,0 +1,20 @@
+  #include<stdio.h>
+int main()
+{
+  int n,prev,current,next,i;
+  printf("Enter the number of Months :");
+  scanf("%d",&n);
+  prev=0;
+  current=1;
+  //printf("%d %d",prev,current);
+  
+  for(i=0;i<n-1;i++)
+  {
+ //   printf("\n%d\n",i);
+    next=prev+current;
+    prev=current;
+    current=next;
+  }
+  printf("\nThe amoeba size is %d",prev);
+  return 0;
+}
